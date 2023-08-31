@@ -17,8 +17,10 @@ setRules();
 updateView();
 function updateView() {
 	html = /*HTML*/ `
-  <img onclick="drawCard()" src="${cards[currentCardIndex].src}"/>
+  <div class="container">
   <div>${cards[currentCardIndex].rule}</div>
+  <img onclick="drawCard()" src="${cards[currentCardIndex].src}"/>
+  </div>
   `;
 	app.innerHTML = html;
 }

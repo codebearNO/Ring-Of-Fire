@@ -1,8 +1,16 @@
 img {
-  height: 50vh;
+  height: auto;
   cursor: pointer;
+  
 }
 
 div {
  width: auto;
+ font-size: xx-large;
+}
+
+.container {
+  text-align: center;
+
+  height: 90vh;
 }
