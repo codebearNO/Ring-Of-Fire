@@ -18,7 +18,7 @@ updateView();
 function updateView() {
 	html = /*HTML*/ `
   <div class="container">
-  <div>${cards[currentCardIndex].rule}</div>
+  ${cards[currentCardIndex].rule}</br>
   <img onclick="drawCard()" src="${cards[currentCardIndex].src}"/>
   </div>
   `;
