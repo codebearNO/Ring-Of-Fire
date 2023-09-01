@@ -24,7 +24,6 @@ function init() {
 	generateCards();
 	setRules();
 	drawCard();
-	console.log(cards);
 }
 
 function generateCards() {
@@ -50,7 +49,6 @@ function generateCards() {
 			onclick: "drawCard()",
 		});
 	}
-	console.log(cards);
 }
 
 function drawCard() {
