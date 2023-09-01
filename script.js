@@ -1,8 +1,3 @@
-// console.log(
-// 	"your card is " + Object.keys(cards[0]),
-// 	"it means " + cards[0]["one of hearts"].meaning
-// );
-
 //model
 let cards = [];
 let currentCardIndex = 0;
@@ -12,30 +7,48 @@ let app = document.getElementById("app");
 let html;
 
 //view
-generateCards();
-setRules();
-updateView();
+init();
 function updateView() {
 	html = /*HTML*/ `
+  <img onclick="${cards[currentCardIndex].onclick}" src="${cards[currentCardIndex].src}"/>
   <div class="container">
   ${cards[currentCardIndex].rule}</br>
-  <img onclick="drawCard()" src="${cards[currentCardIndex].src}"/>
   </div>
   `;
 	app.innerHTML = html;
 }
 
 //controller
+function init() {
+	cards = [];
+	generateCards();
+	setRules();
+	drawCard();
+	console.log(cards);
+}
 
 function generateCards() {
 	for (let i = 1; i < 14; i++) {
-		cards.push({ name: i + " of clubs", src: "images/" + i + "ofclubs.png" });
-		cards.push({ name: i + " of hearts", src: "images/" + i + "ofhearts.png" });
+		cards.push({
+			name: i + " of clubs",
+			src: "images/" + i + "ofclubs.png",
+			onclick: "drawCard()",
+		});
+		cards.push({
+			name: i + " of hearts",
+			src: "images/" + i + "ofhearts.png",
+			onclick: "drawCard()",
+		});
 		cards.push({
 			name: i + " of diamonds",
 			src: "images/" + i + "ofdiamonds.png",
+			onclick: "drawCard()",
 		});
-		cards.push({ name: i + " of spades", src: "images/" + i + "ofspades.png" });
+		cards.push({
+			name: i + " of spades",
+			src: "images/" + i + "ofspades.png",
+			onclick: "drawCard()",
+		});
 	}
 	console.log(cards);
 }
@@ -46,14 +59,12 @@ function drawCard() {
 	cards.splice(currentCardIndex, 1);
 	if (cards.length == 0) {
 		cards.push({
-			name: "odinproject",
-			src: "https://www.theodinproject.com/assets/badge-javascript-069c5eaf6d697e8704865294fd5660c7f63c6010c4c3e729540464d6acf5d769.svg",
+			name: "joker",
+			src: "images/joker.png",
+			rule: "Game Over, Restart? Click the Joker",
+			onclick: "init()",
 		});
-		// alert("Game over, Restart?");
 	}
-	console.log(cards);
-
-	// updateView();
 }
 
 function setRules() {
