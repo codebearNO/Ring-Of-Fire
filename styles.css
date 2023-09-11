@@ -4,8 +4,8 @@ img {
 }
 
 div {
- width: auto;
- font-size: large;
+  width: 80vw;
+  font-size: large;
 }
 body{
   display: flex;
@@ -15,14 +15,11 @@ body{
   text-align: center;
 }
 
-.container {
-  height: 20vh;
-  /* margin-top: 10%; */
-}
+
 
 @media screen and (max-width: 500px){
   img{
-    height: 60vh;
+    height: 50vh;
     margin: 3%;
   }
 }

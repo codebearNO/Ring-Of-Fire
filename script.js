@@ -49,6 +49,7 @@ function generateCards() {
 			onclick: "drawCard()",
 		});
 	}
+	console.log(cards);
 }
 
 function drawCard() {
@@ -105,3 +106,10 @@ function setRules() {
 		}
 	}
 }
+
+// function loadPics() {
+// 	while (cards.length < 0) {
+// 		drawCard();
+// 		console.log(cards);
+// 	}
+// }
