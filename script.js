@@ -10,7 +10,10 @@ let html;
 init();
 function updateView() {
 	html = /*HTML*/ `
-  <img onclick="${cards[currentCardIndex].onclick}" src="${cards[currentCardIndex].src}"/>
+	<div>Cards left: ${cards.length - 1}</div>
+  <img onclick="${cards[currentCardIndex].onclick}" src="${
+		cards[currentCardIndex].src
+	}"/>
   <div class="container">
   ${cards[currentCardIndex].rule}</br>
   </div>
@@ -60,7 +63,7 @@ function drawCard() {
 		cards.push({
 			name: "joker",
 			src: "images/joker.png",
-			rule: "Game Over, Restart? Click the Joker",
+			rule: "Click the card to start a new game.",
 			onclick: "init()",
 		});
 	}
@@ -107,9 +110,6 @@ function setRules() {
 	}
 }
 
-// function loadPics() {
-// 	while (cards.length < 0) {
-// 		drawCard();
-// 		console.log(cards);
-// 	}
-// }
+for (let i = 52; i > 0; i--) {
+	drawCard();
+}
