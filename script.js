@@ -73,7 +73,7 @@ function setRules() {
 	for (let i = 0; i < cards.length; i++) {
 		if (cards[i].name.indexOf("13") == 0) {
 			cards[i].rule =
-				"Pour!- You must pour a little of your drink into the cup that is in the middle of the table. Whomever picks up the LAST king must drink the whole cup, which could be filled with different drinks, so who knows how bad it could taste!";
+				"Take a shot of your choice";
 		} else if (cards[i].name.indexOf("12") == 0) {
 			cards[i].rule =
 				"Questions – Go around in a circle and you have to keep asking questions to each other. Doesn’t matter what the question is, as long as its a question. Whoever messes up and does not say a question, drinks.";
@@ -84,8 +84,8 @@ function setRules() {
 			cards[i].rule =
 				"Categories- Pick a category such as football and you go in a circle and everyone has to say a word that fits with football such as: touchdown, field goal, USC. Whoever messes up, drinks.";
 		} else if (cards[i].name.indexOf("9 ") == 0) {
-			cards[i].rule =
-				"Rhyme – Pick a word such as fog and the person next to you must rhyme with fog, like dog, and it goes to the next person and the next, in a circle, until someone messes up and he or she will have to drink";
+			cards[i].rule = "Thing to say - pick a a word to say before you drink"
+
 		} else if (cards[i].name.indexOf("8 ") == 0) {
 			cards[i].rule =
 				"is Mate – Choose someone to drink with you. He/she, your drinking buddy, should always drink with you.";
